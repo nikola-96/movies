@@ -7,6 +7,9 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    @yield('body')
+   @include('navbar')
+    <div style="margin-top: 90px">
+        @yield('body')
+    </div>
 </body>
 </html>

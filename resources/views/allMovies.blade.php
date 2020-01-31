@@ -1,7 +1,7 @@
 @extends('master')
 
-@section('title', 'All Movies')
 
+@section('title', 'All Movies')
 
 @section('body')
 <ul>
@@ -12,6 +12,5 @@
         </li>
     @endforeach
 </ul>
-    
 @endsection
 

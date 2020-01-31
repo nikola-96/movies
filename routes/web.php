@@ -19,7 +19,4 @@ Route::get('/allMovies', 'MoviesController@index');
 
 Route::get('/singleMovie/{id}', 'MoviesController@show');
 
-Route::get('/navbar', function () {
-    return view('navbaar');
-});
 
