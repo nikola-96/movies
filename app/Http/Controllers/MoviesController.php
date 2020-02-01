@@ -20,4 +20,18 @@ class MoviesController extends Controller
         
         return view('/createMovie');
     }
+    public function store(){
+
+        $data = request()->validate([
+
+            'title' => 'required',
+            'genre' => 'required',
+            'director' => 'required',
+            'year' => 'required|integer|between:1900,2020',
+            'storyline' => 'required|max:1000'
+        ]);
+        \App\Movie::create($data);
+
+        return redirect()->back();
+    }
 }
