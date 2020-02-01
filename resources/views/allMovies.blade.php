@@ -6,7 +6,7 @@
 @section('body')
 <ul>
     @foreach ($movies as $movie)
-        <li>
+        <li class="list-group-item">
            <h1><a href="/singleMovie/{{$movie->id}}">{{$movie->title}}</a></h1>
                 <p>{{$movie->storyline}}</p>
         </li>

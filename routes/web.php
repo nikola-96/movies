@@ -19,4 +19,7 @@ Route::get('/allMovies', 'MoviesController@index');
 
 Route::get('/singleMovie/{id}', 'MoviesController@show');
 
+Route::get('/createMovie', 'MoviesController@create');
+
+
 
