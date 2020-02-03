@@ -12,18 +12,14 @@ class MoviesController extends Controller
     }
     public function show($id){
         $movie = \App\Movie::find($id);
-
         return view('/singleMovie', compact('movie'));
     }
 
     public function create(){
-        
         return view('/createMovie');
     }
     public function store(){
-
         $data = request()->validate([
-
             'title' => 'required',
             'genre' => 'required',
             'director' => 'required',

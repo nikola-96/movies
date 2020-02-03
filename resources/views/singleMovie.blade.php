@@ -6,7 +6,7 @@
 @section('body')
     <h1>{{$movie->title}}</h1>
         <ul>
-            <li>Gender: {{$movie->genre}}</li>
+        <li> Gender: <a href="/genres/{{$movie->genre}}">{{$movie->genre}}</a></li>
             <li>The director: {{$movie->director}}</li>
             <li>Production year: {{$movie->year}}</li>
         </ul>
@@ -24,6 +24,22 @@
             @endforeach
             </ul>
         </div>
+
+        <p style="color:gray" >Add new comment.</p>
+    <form action="/comment/add/{{$movie->id}}" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <input type="text" class="form-control" name="content" placeholder="Your comment">
+                </div>
+            </div>
+            <div style="display:none">
+            <input type="text" class="form-control" name="movie_id" value="{{$movie->id}}">
+            </div>
+            <button type="submit" class="btn btn-secondary">Add Comment</button>
+            @csrf
+
+        </form>
+    
     
         
 @endsection
