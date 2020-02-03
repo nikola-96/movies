@@ -10,4 +10,10 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    protected $latestMovies;
+
+    public function __construct(){
+        $this->latestMovies = \App\Movie::orderBy('id', 'desc')->take(5)->get();
+    }
+
 }

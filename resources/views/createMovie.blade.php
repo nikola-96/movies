@@ -19,7 +19,7 @@
             <div class="form-group col-md-5">
                 <input type="text" class="form-control" name="storyline" placeholder="Storyline">
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-3">
                 <input type="text" class="form-control" name="year" placeholder="Year of filming">
             </div>
         </div>

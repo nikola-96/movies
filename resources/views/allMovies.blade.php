@@ -14,3 +14,6 @@
 </ul>
 @endsection
 
+@section('side')
+@include('sidebar')
+@endsection

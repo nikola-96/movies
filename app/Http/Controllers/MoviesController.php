@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 class MoviesController extends Controller
 {
     public function index(){
+        $latestMovies = $this->latestMovies;
         $movies = \App\Movie::all();
-        return view('/allMovies', compact('movies'));
+        return view('/allMovies', compact('movies', 'latestMovies'));
     }
     public function show($id){
         $movie = \App\Movie::find($id);
